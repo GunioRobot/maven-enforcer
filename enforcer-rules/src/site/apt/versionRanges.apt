@@ -13,8 +13,8 @@
 ~~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 ~~ KIND, either express or implied.  See the License for the
 ~~ specific language governing permissions and limitations
-~~ under the License.    
- 
+~~ under the License.
+
   ------
   Version Range Specification
   ------
@@ -23,10 +23,10 @@
   May 2007
   ------
 
-Version Range Specification   
+Version Range Specification
 
    The {{{./requireMavenVersion.html}RequireMavenVersion}} and {{{./requireJavaVersion.html}RequireJavaVersion}} rules use the {{{http://docs.codehaus.org/display/MAVEN/Dependency+Mediation+and+Conflict+Resolution#DependencyMediationandConflictResolution-DependencyVersionRanges}standard Maven version range syntax}} with one minor change for ease of use (denoted with *):
-   
+
 
 *----------*--------------+
 | Range    | Meaning      |

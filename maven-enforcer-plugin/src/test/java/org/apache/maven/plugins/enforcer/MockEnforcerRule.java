@@ -25,20 +25,20 @@ import org.apache.maven.enforcer.rule.api.EnforcerRuleHelper;
 
 /**
  * @author <a href="mailto:brianf@apache.org">Brian Fox</a>
- * 
+ *
  */
 public class MockEnforcerRule
     implements EnforcerRule
 {
 
     public boolean failRule = false;
-    
+
     public String cacheId="";
-    
+
     public boolean isCacheable = false;
-    
+
     public boolean isResultValid = false;
-    
+
     public boolean executed = false;
 
     public MockEnforcerRule( boolean fail )

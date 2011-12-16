@@ -13,8 +13,8 @@
 ~~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 ~~ KIND, either express or implied.  See the License for the
 ~~ specific language governing permissions and limitations
-~~ under the License.    
- 
+~~ under the License.
+
   ------
   Writing a custom rule
   ------
@@ -24,14 +24,14 @@
   ------
 
 Writing a custom rule
- 
-  Custom rules are easy to make with the <<<maven-enforcer-rule-api>>>. These rules can then be invoked with the 
-  {{{http://maven.apache.org/plugins/maven-enforcer-plugin/}maven-enforcer-plugin}}. 
-  
+
+  Custom rules are easy to make with the <<<maven-enforcer-rule-api>>>. These rules can then be invoked with the
+  {{{http://maven.apache.org/plugins/maven-enforcer-plugin/}maven-enforcer-plugin}}.
+
   Note: The files shown below may be downloaded here: {{{./custom-rule.zip}custom-rule.zip}}
-  
+
   [[1]] First make a new jar project starting with the sample pom below:
-  
+
 +---+
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -99,11 +99,11 @@ Writing a custom rule
   [[2]] Create your rule class. The rule must implement the {{{./apidocs/index.html}EnforcerRule}} interface.
    The rule can get access to components and the log via the {{{./apidocs/index.html}EnforcerRuleHelper}} interface.
    If the rule succeeds, it should just simply return. If the rule fails, it should throw an {{{./apidocs/index.html}EnforcerRuleException}} with a descriptive message telling the user why the rule failed.
-   
+
    There are several methods that must be implemented related to caching.
-   
+
    Here's a sample class that shows how to access the helper methods and retrieve components by class name from the helper:
-   
+
 +---+
 package org.apache.maven.enforcer.rule;
 
@@ -172,9 +172,9 @@ public class MyCustomRule
      * If your rule is cacheable, you must return a unique id when parameters or conditions
      * change that would cause the result to be different. Multiple cached results are stored
      * based on their id.
-     * 
+     *
      * The easiest way to do this is to return a hash computed from the values of your parameters.
-     * 
+     *
      * If your rule is not cacheable, then the result here is not important, you may return anything.
      */
     public String getCacheId()
@@ -186,7 +186,7 @@ public class MyCustomRule
     /**
      * This tells the system if the results are cacheable at all. Keep in mind that during
      * forked builds and other things, a given rule may be executed more than once for the same
-     * project. This means that even things that change from project to project may still 
+     * project. This means that even things that change from project to project may still
      * be cacheable in certain instances.
      */
     public boolean isCacheable()
@@ -196,7 +196,7 @@ public class MyCustomRule
 
     /**
      * If the rule is cacheable and the same id is found in the cache, the stored results
-     * are passed to this method to allow double checking of the results. Most of the time 
+     * are passed to this method to allow double checking of the results. Most of the time
      * this can be done by generating unique ids, but sometimes the results of objects returned
      * by the helper need to be queried. You may for example, store certain objects in your rule
      * and then query them later.
@@ -206,12 +206,12 @@ public class MyCustomRule
         return false;
     }
 }
-+---+   
++---+
 
   [[3]] Build and Install or Deploy your custom rule.
- 
+
   [[4]] Add your custom-rule artifact as a dependency of the <<<maven-enforcer-plugin>>> in your build:
-  
+
 +---+
 <project>
   ...
@@ -229,7 +229,7 @@ public class MyCustomRule
           </dependency>
         </dependencies>
         ...
-      </plugin>   
+      </plugin>
     </plugins>
   </build>
   ...
@@ -238,7 +238,7 @@ public class MyCustomRule
 
   [[5]] Add your rule to the configuration section of the <<<maven-enforcer-plugin>>>. The name of your class will be the name of the rule, and
  you must add an <<<implementation>>> hint that contains the fully qualified class name:
- 
+
 +---+
         ...
         <configuration>
@@ -252,7 +252,7 @@ public class MyCustomRule
 +---+
 
   [[6]] That's it. The full plugin config may look like this:
-  
+
 +---+
 <project>
   ...

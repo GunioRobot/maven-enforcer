@@ -30,7 +30,7 @@ public class RequireFilesExist
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see org.apache.maven.plugins.enforcer.AbstractRequireFiles#checkFile(java.io.File)
      */
     boolean checkFile( File file )
@@ -41,7 +41,7 @@ public class RequireFilesExist
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see org.apache.maven.plugins.enforcer.AbstractRequireFiles#getErrorMsg()
      */
     String getErrorMsg()

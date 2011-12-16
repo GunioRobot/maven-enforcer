@@ -27,7 +27,7 @@ import org.codehaus.plexus.component.repository.exception.ComponentLookupExcepti
 
 /**
  * @author <a href="mailto:brianf@apache.org">Brian Fox</a>
- * 
+ *
  */
 public class TestDefaultEnforcementRuleHelper
     extends TestCase

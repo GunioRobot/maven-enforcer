@@ -23,7 +23,7 @@ import org.apache.maven.plugin.MojoExecutionException;
 
 /**
  * This goal has been deprecated.
- * 
+ *
  * @deprecated
  * @goal enforce-once
  * @phase validate

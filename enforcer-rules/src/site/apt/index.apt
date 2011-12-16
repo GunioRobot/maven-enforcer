@@ -13,8 +13,8 @@
 ~~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 ~~ KIND, either express or implied.  See the License for the
 ~~ specific language governing permissions and limitations
-~~ under the License.    
- 
+~~ under the License.
+
   ------
   Standard Rules
   ------
@@ -28,13 +28,13 @@ Standard Rules
   The following standard rules ship along with the enforcer plugin:
 
   * {{{./alwaysPass.html}alwaysPass}} - Always passes... used to test plugin configuration.
-  
+
   * {{{./alwaysFail.html}alwaysFail}} - Always fail... used to test plugin configuration.
- 
+
   * {{{./bannedDependencies.html}bannedDependencies}} - enforces that excluded dependencies aren't included.
 
   * bannedPlugins - enforces that excluded plugins aren't included.
-  
+
   * {{{./dependencyConvergence.html}dependencyConvergence}} - ensure all dependencies converge to the same version.
 
   * {{{./evaluateBeanshell.html}evaluateBeanshell}} - evaluates a beanshell script.
@@ -52,9 +52,9 @@ Standard Rules
   * {{{./requirePluginVersions.html}requirePluginVersions}} - enforces that all plugins have a specified version.
 
   * {{{./requireProperty.html}requireProperty}} - enforces the existence and values of properties.
-   
+
   * {{{./requireFilesDontExist.html}requireFilesDontExist}} - enforces that the list of files do not exist.
-  
+
   * {{{./requireFilesExist.html}requireFilesExist}} - enforces that the list of files do exist.
 
   * {{{./requireFilesSize.html}requireFilesSize}} - enforces that the list of files exist and are within a certain size range.

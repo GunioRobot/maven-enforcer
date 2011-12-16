@@ -13,8 +13,8 @@
 ~~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 ~~ KIND, either express or implied.  See the License for the
 ~~ specific language governing permissions and limitations
-~~ under the License.    
- 
+~~ under the License.
+
   ------
   Introduction
   ------
@@ -25,8 +25,7 @@
 
 Maven Enforcer Rule API - Extending The Loving Iron Fist of Maven\x99
 
-  Custom rules are easy to make with the <<<maven-enforcer-rule-api>>>. These rules can then be invoked with the 
-  {{{../../plugins/maven-enforcer-plugin/}maven-enforcer-plugin}}. 
-  
+  Custom rules are easy to make with the <<<maven-enforcer-rule-api>>>. These rules can then be invoked with the
+  {{{../../plugins/maven-enforcer-plugin/}maven-enforcer-plugin}}.
+
   See {{{./writing-a-custom-rule.html}Writing a Custom Rule}} for instructions on how to make your own rule.
- 

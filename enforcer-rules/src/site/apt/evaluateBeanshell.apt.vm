@@ -13,8 +13,8 @@
 ~~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 ~~ KIND, either express or implied.  See the License for the
 ~~ specific language governing permissions and limitations
-~~ under the License.    
- 
+~~ under the License.
+
   ------
   Beanshell
   ------
@@ -29,16 +29,16 @@ Beanshell
 
 
    The following parameters are supported by this rule:
-   
+
    * condition - the beanshell statement to evaluate.
-   
+
    * message - an optional message to the user if the rule fails.
-   
+
    []
 
-   
+
   Sample Plugin Configuration:
-  
+
 +---+
 <project>
   [...]
@@ -70,9 +70,9 @@ Beanshell
   [...]
 </project>
 +---+
-  
+
   The condition can be a complex script or a simple expression. As long as it results in True, the rule will succeed. This means code can be executed as long as the last line results in true.
-  
+
 +---+
   <evaluateBeanshell>
     <condition>for (int i = 0;i!=10;i++){print ("Hello World "+i);};1==1</condition>

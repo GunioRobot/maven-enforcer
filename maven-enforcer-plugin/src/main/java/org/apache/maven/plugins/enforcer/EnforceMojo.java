@@ -41,7 +41,7 @@ import org.codehaus.plexus.personality.plexus.lifecycle.phase.Contextualizable;
 /**
  * This goal executes the defined enforcer-rules once per
  * module.
- * 
+ *
  * @requiresDependencyResolution test
  * @goal enforce
  * @phase validate
@@ -55,14 +55,14 @@ public class EnforceMojo
 
     /**
      * Path Translator needed by the ExpressionEvaluator
-     * 
+     *
      * @component role="org.apache.maven.project.path.PathTranslator"
      */
     protected PathTranslator translator;
 
     /**
      * The MavenSession
-     * 
+     *
      * @parameter expression="${session}"
      * @readonly
      */
@@ -70,7 +70,7 @@ public class EnforceMojo
 
     /**
      * POM
-     * 
+     *
      * @parameter expression="${project}"
      * @readonly
      * @required
@@ -79,7 +79,7 @@ public class EnforceMojo
 
     /**
      * Flag to fail the build if a version check fails.
-     * 
+     *
      * @parameter expression="${enforcer.fail}"
      *            default-value="true"
      */
@@ -87,7 +87,7 @@ public class EnforceMojo
 
     /**
      * Flag to easily skip all checks
-     * 
+     *
      * @parameter expression="${enforcer.skip}"
      *            default-value="false"
      */
@@ -95,7 +95,7 @@ public class EnforceMojo
 
     /**
      * Fail on the first rule that doesn't pass
-     * 
+     *
      * @parameter expression="${enforcer.failFast}"
      *            default-value="false"
      */
@@ -104,12 +104,12 @@ public class EnforceMojo
     /**
      * Array of objects that implement the EnforcerRule
      * interface to execute.
-     * 
+     *
      * @parameter
      * @required
      */
     private EnforcerRule[] rules;
-    
+
     /**
      * Use this flag to disable rule result caching. This will cause
      * all rules to execute on each project even if the rule indicates it can
@@ -118,13 +118,13 @@ public class EnforceMojo
      *  default-value="false"
      */
      protected boolean ignoreCache = false;
-    
+
     /**
      * This is a static variable used to persist the cached results across plugin invocations.
      */
      protected static Hashtable cache = new Hashtable();
 
-    
+
     // set by the contextualize method. Only way to get the
     // plugin's container in 2.0.x
     protected PlexusContainer container;
@@ -134,7 +134,7 @@ public class EnforceMojo
     {
         container = (PlexusContainer) context.get( PlexusConstants.PLEXUS_KEY );
     }
-    
+
     /**
      * Entry point to the mojo
      */
@@ -236,7 +236,7 @@ public class EnforceMojo
     /**
      * This method determines if a rule should execute based
      * on the cache
-     * 
+     *
      * @param rule
      * @return
      */
@@ -256,7 +256,7 @@ public class EnforceMojo
                     return false;
                 }
             }
-            
+
             //add it to the cache of executed rules
             EnforceMojo.cache.put( key, rule );
         }

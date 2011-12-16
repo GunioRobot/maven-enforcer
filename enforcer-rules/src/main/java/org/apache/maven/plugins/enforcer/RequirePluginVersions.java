@@ -1013,7 +1013,7 @@ public class RequirePluginVersions
     {
         List plugins = new ArrayList();
         // get all the pom models
-        
+
         String pomName = null;
         try
         {

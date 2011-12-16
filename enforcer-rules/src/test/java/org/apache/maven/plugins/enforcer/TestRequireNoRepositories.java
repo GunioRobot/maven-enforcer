@@ -27,7 +27,7 @@ import org.codehaus.plexus.PlexusTestCase;
 
 /**
  * Test the "require no repositories" rule.
- * 
+ *
  * @author <a href="mailto:brett@apache.org">Brett Porter</a>
  */
 public class TestRequireNoRepositories

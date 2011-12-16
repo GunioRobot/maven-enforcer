@@ -183,7 +183,7 @@ public class RequireNoRepositories
                 {
                     // if we are not allowing snapshots and this repo is enabled for releases
                     // it is banned.  We don't care whether it is enabled for snapshots
-                    // if you define a repo and don't enable it for anything, then we have nothing 
+                    // if you define a repo and don't enable it for anything, then we have nothing
                     // to worry about
                     bannedRepos.add( r.getId() );
                 }

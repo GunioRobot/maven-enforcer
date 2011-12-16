@@ -59,7 +59,7 @@ public class RequireReleaseDeps
     public boolean failWhenParentIsSnapshot = true;
 
     /**
-     * Dependencies to ignore when checking for release versions.  For example, inter-module dependencies 
+     * Dependencies to ignore when checking for release versions.  For example, inter-module dependencies
      * can be excluded from the check and therefore allowed to contain snapshot versions.
      */
     public List excludes = null;
@@ -140,7 +140,7 @@ public class RequireReleaseDeps
         Set foundSnapshots = new HashSet();
 
         Set filteredDependencies = this.filterArtifacts( dependencies );
-        
+
         Iterator DependencyIter = filteredDependencies.iterator();
         while ( DependencyIter.hasNext() )
         {
@@ -154,11 +154,11 @@ public class RequireReleaseDeps
 
         return foundSnapshots;
     }
-    
+
     /*
      * Filter the dependency artifacts according to the includes and excludes
      * If includes and excludes are both null, the original set is returned.
-     * 
+     *
      * @param dependencies the list of dependencies to filter
      * @return the resulting set of dependencies
      */
@@ -168,7 +168,7 @@ public class RequireReleaseDeps
         {
             return dependencies;
         }
-        
+
         AndArtifactFilter filter = new AndArtifactFilter( );
         if ( includes != null )
         {
@@ -178,7 +178,7 @@ public class RequireReleaseDeps
         {
             filter.add( new StrictPatternExcludesArtifactFilter( excludes ) );
         }
-        
+
         Set result = new HashSet();
         Iterator iter = dependencies.iterator();
         while ( iter.hasNext() )

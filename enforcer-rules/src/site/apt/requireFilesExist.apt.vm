@@ -13,8 +13,8 @@
 ~~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 ~~ KIND, either express or implied.  See the License for the
 ~~ specific language governing permissions and limitations
-~~ under the License.    
- 
+~~ under the License.
+
   ------
   Require Files Exist
   ------
@@ -29,18 +29,18 @@ Require Files Exist
 
 
    The following parameters are supported by this rule:
-   
+
    * message - an optional message to the user if the rule fails.
-   
+
    * files - A list of files to check.
-   
+
    * allowNulls - If null files should be allowed. If allowed, they will be treated as if they do exist. Default is false.
-   
+
    []
 
-   
+
   Sample Plugin Configuration:
-  
+
 +---+
 <project>
   [...]

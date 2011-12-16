@@ -35,7 +35,7 @@ import org.codehaus.plexus.personality.plexus.lifecycle.phase.Contextualizable;
 
 /**
  * This goal displays the current platform information.
- * 
+ *
  * @goal display-info
  * @author <a href="mailto:brianf@apache.org">Brian Fox</a>
  * @version $Id$
@@ -47,14 +47,14 @@ public class DisplayInfoMojo
 
     /**
      * Path Translator needed by the ExpressionEvaluator
-     * 
+     *
      * @component role="org.apache.maven.project.path.PathTranslator"
      */
     protected PathTranslator translator;
 
     /**
      * The MavenSession
-     * 
+     *
      * @parameter default-value="${session}"
      * @readonly
      */
@@ -62,7 +62,7 @@ public class DisplayInfoMojo
 
     /**
      * POM
-     * 
+     *
      * @parameter default-value="${project}"
      * @readonly
      * @required

@@ -13,8 +13,8 @@
 ~~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 ~~ KIND, either express or implied.  See the License for the
 ~~ specific language governing permissions and limitations
-~~ under the License.    
- 
+~~ under the License.
+
   ------
   Require Release Dependencies
   ------
@@ -29,16 +29,16 @@ Require Release Dependencies
 
 
    The following parameters are supported by this rule:
-   
+
    * searchTransitive - if transitive dependencies should be checked.
-   
+
    * message - an optional message to the user if the rule fails.
-   
+
    []
 
-   
+
   Sample Plugin Configuration:
-  
+
 +---+
 <project>
   [...]

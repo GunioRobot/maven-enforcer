@@ -28,7 +28,7 @@ import junit.framework.TestCase;
 
 /**
  * Test the "require files exist" rule.
- * 
+ *
  * @author <a href="brett@apache.org">Brett Porter</a>
  */
 public class TestRequireFilesExist

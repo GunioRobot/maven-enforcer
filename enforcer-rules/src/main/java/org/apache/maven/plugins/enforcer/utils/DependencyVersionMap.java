@@ -28,13 +28,13 @@ import org.apache.maven.shared.dependency.tree.DependencyNode;
 import org.apache.maven.shared.dependency.tree.traversal.DependencyNodeVisitor;
 
 public class DependencyVersionMap implements DependencyNodeVisitor {
-  
+
   private boolean demandReleasedVersions = false;
-  
+
   private Map<String, List<DependencyNode>> idsToNode;
-  
+
   private List<DependencyNode> snapshots;
-  
+
   public DependencyVersionMap(Log log){
     idsToNode = new HashMap<String, List<DependencyNode>>();
     snapshots = new ArrayList<DependencyNode>();
@@ -44,7 +44,7 @@ public class DependencyVersionMap implements DependencyNodeVisitor {
     this(log);
     this.demandReleasedVersions = demandReleasedVersions;
   }
-  
+
   public boolean visit(DependencyNode node) {
     addDependency(node);
     if (containsConflicts(node)){
@@ -61,12 +61,12 @@ public class DependencyVersionMap implements DependencyNodeVisitor {
 
   public boolean endVisit(DependencyNode node) {
     return true;
-  } 
-  
+  }
+
   private String constructKey(DependencyNode node){
     return constructKey(node.getArtifact());
   }
-  
+
   private String constructKey(Artifact artifact){
     return artifact.getGroupId()+":"+artifact.getArtifactId();
   }
@@ -82,12 +82,12 @@ public class DependencyVersionMap implements DependencyNodeVisitor {
       idsToNode.put(key,nodes);
     }
     nodes.add(node);
-  }  
-  
+  }
+
   public List<DependencyNode> getSnapshots(){
     return snapshots;
   }
-  
+
   private boolean containsConflicts(DependencyNode node){
     return containsConflicts(node.getArtifact());
   }
@@ -105,11 +105,11 @@ public class DependencyVersionMap implements DependencyNodeVisitor {
         if (version.compareTo(node.getArtifact().getVersion()) != 0){
           return true;
         }
-      }      
+      }
     }
     return false;
   }
-  
+
   public List<List<DependencyNode>> getConflictedVersionNumbers(){
     List<List<DependencyNode>> output = new ArrayList<List<DependencyNode>>();
     for (List<DependencyNode> nodes : idsToNode.values()) {

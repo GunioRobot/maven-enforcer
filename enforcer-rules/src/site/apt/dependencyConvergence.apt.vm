@@ -27,7 +27,7 @@
   Here is a concrete example.
 
   This will cause a build to fail.
-  
+
 -----------------------------------------------------------------------------------
 
   <dependencies>
@@ -41,7 +41,7 @@
       <artifactId>slf4j-nop</artifactId>
       <version>1.6.0</version>
     </dependency>
-  </dependencies>  
+  </dependencies>
 -----------------------------------------------------------------------------------
 
   With this being logged during compilation
@@ -63,7 +63,7 @@ and
 -----------------------------------------------------------------------------------
 
   And this will succeed.
-  
+
 -----------------------------------------------------------------------------------
     <dependency>
       <groupId>org.slf4j</groupId>

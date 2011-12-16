@@ -48,13 +48,13 @@ public class DependencyConvergence implements EnforcerRule {
   private static Log log;
 
   private static I18N i18n;
-  
+
   /**
    * Uses the {@link EnforcerRuleHelper} to populate the values of the {@link DependencyTreeBuilder#buildDependencyTree(MavenProject, ArtifactRepository, ArtifactFactory, ArtifactMetadataSource, ArtifactFilter, ArtifactCollector)}
    * factory method. <br/>
-   * 
+   *
    * This method simply exists to hide all the ugly lookup that the {@link EnforcerRuleHelper} has to do.
-   * 
+   *
    * @param helper
    * @return a Dependency Node which is the root of the project's dependency tree
    * @throws EnforcerRuleException
@@ -78,11 +78,11 @@ public class DependencyConvergence implements EnforcerRule {
       throw new EnforcerRuleException("Could not build dependency tree " + e.getLocalizedMessage(), e);
     }
   }
-  
+
   public void execute(EnforcerRuleHelper helper) throws EnforcerRuleException {
     if (log == null){
       log = helper.getLog();
-    } 
+    }
     try {
       if (i18n == null){
         i18n = (I18N) helper.getComponent(I18N.class);
@@ -111,7 +111,7 @@ public class DependencyConvergence implements EnforcerRule {
   private String getFullArtifactName(Artifact artifact){
     return artifact.getGroupId() + ":" + artifact.getArtifactId() +":"+ artifact.getVersion();
   }
-  
+
   private StringBuilder buildTreeString(DependencyNode node) {
     List<String> loc = new ArrayList<String>();
     DependencyNode currentNode = node;
@@ -151,15 +151,15 @@ public class DependencyConvergence implements EnforcerRule {
     }
     return builder.toString();
   }
-  
+
   /**
    * If your rule is cacheable, you must return a unique id when parameters or
    * conditions change that would cause the result to be different. Multiple
    * cached results are stored based on their id.
-   * 
+   *
    * The easiest way to do this is to return a hash computed from the values of
    * your parameters.
-   * 
+   *
    * If your rule is not cacheable, then the result here is not important, you
    * may return anything.
    */

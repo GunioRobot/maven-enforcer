@@ -13,8 +13,8 @@
 ~~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 ~~ KIND, either express or implied.  See the License for the
 ~~ specific language governing permissions and limitations
-~~ under the License.    
- 
+~~ under the License.
+
   ------
   Require Property
   ------
@@ -29,19 +29,19 @@ Require Property
 
 
    The following parameters are supported by this rule:
-   
+
    * property - the property to evaluate.
-   
-   * message - an optional message to the user if the rule fails. Default is: "Property 'xxx' is required for this build".	
-   
+
+   * message - an optional message to the user if the rule fails. Default is: "Property 'xxx' is required for this build".
+
    * regex - a regular expression used to check the value of the property.
-   
+
    * regexMessage - an optional message to the user if the regex check fails.
-   
+
    []
 
   Sample Plugin Configuration:
-  
+
 +---+
 <project>
   [...]
@@ -82,4 +82,4 @@ Require Property
   [...]
 </project>
 +---+
-  
+

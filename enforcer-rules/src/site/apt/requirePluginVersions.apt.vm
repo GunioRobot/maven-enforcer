@@ -39,7 +39,7 @@ Require Plugin Versions
 
    * banTimestamps - disallow any use of snapshot plugins with timestamp version (only enabled when banSnapshots is true). Default = true.
 
-   * phases - The comma separated list of phases that should be used to find 
+   * phases - The comma separated list of phases that should be used to find
      lifecycle plugin bindings. The default value is "clean,deploy,site".
 
    * additionalPlugins - A list of additional plugins to enforce have versions. These

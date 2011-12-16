@@ -13,8 +13,8 @@
 ~~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 ~~ KIND, either express or implied.  See the License for the
 ~~ specific language governing permissions and limitations
-~~ under the License.    
- 
+~~ under the License.
+
   ------
   Require Release Version
   ------
@@ -29,16 +29,16 @@ Require Release Version
 
 
    The following parameters are supported by this rule:
-   
+
    * message - an optional message to the user if the rule fails.
-    
-   * failWhenParentIsSnapshot - if the parent should be checked. Default: true 
+
+   * failWhenParentIsSnapshot - if the parent should be checked. Default: true
 
    []
 
-   
+
   Sample Plugin Configuration:
-  
+
 +---+
 <project>
   [...]

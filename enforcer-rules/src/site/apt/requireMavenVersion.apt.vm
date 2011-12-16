@@ -13,8 +13,8 @@
 ~~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 ~~ KIND, either express or implied.  See the License for the
 ~~ specific language governing permissions and limitations
-~~ under the License.    
- 
+~~ under the License.
+
   ------
   Require Maven Version
   ------
@@ -28,15 +28,15 @@ Require Maven Version
    This rule enforces certain Maven versions. The rule uses the {{{./versionRanges.html}Enforcer version range syntax}} to define allowed versions.
 
    The following parameters are supported by this rule:
-   
+
    * message - an optional message to the user if the rule fails.
-   
+
    * {{{../apidocs/org/apache/maven/plugin/enforcer/AbstractVersionEnforcer.html#version}version}} - {{{./versionRanges.html}range}} of allowed Maven versions.
-   
+
    []
 
    Sample Plugin Configuration:
-   
+
 +---+
 <project>
   [...]
@@ -57,7 +57,7 @@ Require Maven Version
                 <requireMavenVersion>
                   <version>2.0.6</version>
                 </requireMavenVersion>
-              </rules>    
+              </rules>
             </configuration>
           </execution>
         </executions>
@@ -66,4 +66,4 @@ Require Maven Version
   </build>
   [...]
 </project>
-+---+  
++---+
